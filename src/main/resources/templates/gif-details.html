@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <title>giflib | Home</title>
+    <title th:text="'giflib | ' + ${gif.name}">giflib</title>
 </head>
 <body>
     <div class="navbar-fixed">
@@ -43,25 +43,30 @@
             </div>
         </div>
     </div>
-    <div class="gifs container">
+    <div class="gif-detail container">
+        <div class="frame row">
+            <div class="col s12">
+                <img th:src="@{/gifs/compiler-bot.gif}" alt="gif" />
+                <a href="#" class="mark favorite"></a>
+            </div>
+        </div>
         <div class="row">
-            <div class="col s12 l4">
-                <a>
-                    <img th:src="@{/gifs/compiler-bot.gif}" />
-                    <a href="#" class="mark favorite"></a>
-                </a>
+            <div class="col s12 l6">
+                <div class="meta row">
+                    <div class="col s3">
+                        <img class="circle" src="http://api.adorable.io/avatars/205/avatar" alt="avatar" />
+                    </div>
+                    <div class="col s9">
+                        <h4>Craig Dennis</h4>
+                        <p>Uploaded on Oct 30 2015</p>
+                    </div>
+                </div>
             </div>
-            <div class="col s12 l4">
-                <a>
-                    <img th:src="@{/gifs/compiler-bot.gif}" />
-                    <a href="#" class="mark favorite"></a>
-                </a>
-            </div>
-            <div class="col s12 l4">
-                <a>
-                    <img th:src="@{/gifs/compiler-bot.gif}" />
-                    <a href="#" class="mark favorite"></a>
-                </a>
+            <div class="col s12 l6">
+                <div class="share">
+                    <a class="btn right" href="#">Copy</a>
+                    <span>URL</span>
+                </div>
             </div>
         </div>
     </div>
