@@ -13,9 +13,14 @@ import java.util.List;
 
 @Component
 public class GifRepository   {
+
     private static final List<Gif> ALL_GIFS = Arrays.asList(
             new Gif("android-explosion", LocalDate.of(2015,2,13), "Zahid A.", false),
-            new Gif("compiler-bot", LocalDate.of(2015,2,13), "Anwar, Zahid", true)
+            new Gif("ben-and-mike", LocalDate.of(2015,10,30), "Anwar, Zahid", true),
+            new Gif("book-dominos", LocalDate.of(2015,9,15), "Dr. Zahid", false),
+            new Gif("compiler-bot", LocalDate.of(2015,2,13), "Prof. Anwar", true),
+            new Gif("cowboy-coder", LocalDate.of(2015,2,13), "Zahid Anwar (PhD)", false),
+            new Gif("infinite-andrew", LocalDate.of(2015,8,23), "ZA", true)
     );
 
     public Gif findByName(String name) {
@@ -27,4 +32,5 @@ public class GifRepository   {
         return null;
 
     }
+
 }
