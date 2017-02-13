@@ -33,4 +33,7 @@ public class GifRepository   {
 
     }
 
+    public List<Gif> getAllGifs(){
+        return ALL_GIFS;
+    }
 }
