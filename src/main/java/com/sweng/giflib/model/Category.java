@@ -1,23 +1,25 @@
 package com.sweng.giflib.model;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by ZAnwar on 2/14/2017.
  */
 public class Category {
-    private int id;
+    private Long id;
     private String name;
+    private String colorCode;
+    private List<Gif> gifs = new ArrayList<>();
 
-    public Category(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    public Category(){}
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -28,4 +30,18 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getColorCode() {
+        return colorCode;
+    }
+
+    public void setColorCode(String colorCode) {
+        this.colorCode = colorCode;
+    }
+
+    public List<Gif> getGifs() {
+        return gifs;
+    }
+
 }
+
