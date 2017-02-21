@@ -8,10 +8,15 @@ import java.util.List;
 /**
  * Created by ZAnwar on 2/14/2017.
  */
+@Entity
 public class Category {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String colorCode;
+
+    @OneToMany(mappedBy = "category")
     private List<Gif> gifs = new ArrayList<>();
 
     public Category(){}
@@ -45,4 +50,3 @@ public class Category {
     }
 
 }
-
