@@ -8,17 +8,10 @@ import java.time.temporal.ChronoUnit;
 /**
  * Created by ZAnwar on 2/6/2017.
  */
-@Entity
 public class Gif {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Lob
     private byte[] bytes;
     private String description;
-
-    @ManyToOne
     private Category category;
     private LocalDateTime dateUploaded = LocalDateTime.now();
     private String username = "You";
