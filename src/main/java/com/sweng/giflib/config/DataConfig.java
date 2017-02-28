@@ -18,8 +18,8 @@ import javax.sql.DataSource;
 @Configuration
 @PropertySource("app.properties")
 public class DataConfig {
-    @Autowired
-    private Environment env;
+        @Autowired
+        private Environment env;
 
     @Bean
     public LocalSessionFactoryBean sessionFactory() {

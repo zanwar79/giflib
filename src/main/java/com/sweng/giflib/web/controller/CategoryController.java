@@ -5,6 +5,8 @@ package com.sweng.giflib.web.controller;
  */
 import com.sweng.giflib.model.Category;
 import com.sweng.giflib.model.Gif;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,12 +20,16 @@ import java.util.List;
 
 @Controller
 public class CategoryController {
+    @Autowired
+    private SessionFactory sessionFactory;
 
     // Index of all categories
     @RequestMapping("/categories")
     public String listCategories(Model model) {
         // TODO: Get all categories
-        List<Category> categories = new ArrayList<>();
+        Session session = sessionFactory.openSession();
+        //List<Category> categories = new ArrayList<>();
+        List<Category> categories = session.createCriteria(Category.class).list();
 
         model.addAttribute("categories",categories);
         return "category/index";
