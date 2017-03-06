@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface CategoryService {
     List<Category> findAll();
-    Category finddById(Long id);
+    Category findById(Long id);
     void save(Category category);
     void delete (Category category);
 }

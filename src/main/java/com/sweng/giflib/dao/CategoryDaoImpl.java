@@ -27,7 +27,7 @@ public class CategoryDaoImpl implements CategoryDao{
     }
 
     @Override
-    public Category finddById(Long id) {
+    public Category findById(Long id) {
         return null;
     }
 
