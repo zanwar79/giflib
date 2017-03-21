@@ -2,6 +2,9 @@ package com.sweng.giflib.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +16,13 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotNull
+    @Size(min = 3, max = 12)
     private String name;
+
+    @NotNull
+    @Pattern(regexp = "#[0-9a-fA-F]{6}")
     private String colorCode;
 
     @OneToMany(mappedBy = "category")
