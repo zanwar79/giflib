@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
 
-<head th:fragment="head(page_title)" lang="en">
+<head lang="en">
     <meta charset="UTF-8"/>
     <meta description="viewport" content="width=device-width, initial-scale=1"/>
 
     <link rel="icon" th:href="@{/favicon.png}" />
 
-    <link rel="stylesheet" th:href="@{/vendor/materialize/css/materialize.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"/>
     <link rel="stylesheet" th:href="@{/vendor/codrops/css/cs-select.css}" />
     <link rel="stylesheet" th:href="@{/vendor/codrops/css/cs-skin-border.css}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" th:href="@{/app.css}" />
 
-    <title th:text="'giflib | ' + ${page_title}">giflib</title>
+    <title>giflib</title>
 </head>
 
 <body>
@@ -23,6 +23,14 @@
         <div class="container">
             <a th:href="@{/}" class="brand-logo">gif<span>.</span>lib</a>
             <a href="#" data-activates="mobile-nav" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul class="right">
+                <li sec:authentication="name"></li>
+                <li>
+                    <form class="logout inline" th:action="@{/logout}" method="post">
+                        <button type="submit"><i class="material-icons">power_settings_new</i></button>
+                    </form>
+                </li>
+            </ul>
             <ul class="right hide-on-med-and-down">
                 <li th:classappend="${#httpServletRequest.servletPath.equals('/upload') ? 'active' : ''}"><a th:href="@{/upload}">Upload</a></li>
                 <li th:classappend="${#httpServletRequest.servletPath.equals('/') ? 'active' : ''}"><a th:href="@{/}">Explore</a></li>

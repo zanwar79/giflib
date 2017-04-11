@@ -13,11 +13,12 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
 
+        <property name="format_sql">true</property>
         <!-- Set naming strategy -->
         <property name="hibernate.implicit_naming_strategy">org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl</property>
 
         <!-- Update the database schema (structure) on startup -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create-drop</property>
     </session-factory>
 
 </hibernate-configuration>

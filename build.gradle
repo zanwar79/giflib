@@ -13,10 +13,17 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
     compile 'org.hashids:hashids:1.0.1'
-    compile 'org.springframework:spring-orm:4.2.5.RELEASE'
-    compile 'org.hibernate:hibernate-core:5.1.0.Final'
-    compile 'org.apache.tomcat:tomcat-dbcp:8.0.32'
-    compile 'com.h2database:h2:1.4.191'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    compile 'org.springframework:spring-orm:4.2.4.RELEASE'
+    compile 'org.springframework.data:spring-data-jpa:1.9.2.RELEASE'
+    compile 'org.hibernate:hibernate-core:5.0.6.Final'
+    compile 'org.hibernate:hibernate-entitymanager:5.0.6.Final'
+    compile 'org.apache.tomcat:tomcat-dbcp:8.0.30'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE'
+    runtime 'com.h2database:h2'
+    runtime 'javax.transaction:jta:1.1'
+    runtime 'org.aspectj:aspectjweaver:1.8.7'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
