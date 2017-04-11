@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/giflib.iml" filepath="$PROJECT_DIR$/.idea/modules/giflib.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/giflib_main.iml" filepath="$PROJECT_DIR$/.idea/modules/giflib_main.iml" group="giflib" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/giflib_test.iml" filepath="$PROJECT_DIR$/.idea/modules/giflib_test.iml" group="giflib" />
-      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
     </modules>
   </component>
 </project>
